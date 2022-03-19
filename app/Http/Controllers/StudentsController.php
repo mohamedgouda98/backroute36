@@ -9,10 +9,6 @@ class StudentsController extends Controller
 {
     public function students()
     {
-        $x = 9;
-        $y = $x  != 10 ? 10 : 20;
-        $y = $x ?? 20;
-        dd($y);
         $students = Student::get();
         return view('students', compact('students'));
     }
